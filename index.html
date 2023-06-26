@@ -53,8 +53,8 @@
         <div class="container-fluid"style="height: 13vh;">
         </div>
 
-        <div class="container-fluid row justify-content-evenly">
-            <div class="card border-primary text-center rounded-0" style="width: 15rem;">
+        <div class="container-fluid row justify-content-evenly" id="cards">
+            <div class="card border-primary text-center rounded-0" id="first_op" style="width: 15rem;">
                 <div class="card-body">
                   <h5 class="card-title">Estudiante</h5>
                   <p class="card-text">Tienen un descuento</p>
@@ -62,7 +62,7 @@
                   <p class="text-secondary" style="font-size: 15px;">*presentar documentación</p>
                   </div>
             </div>
-              <div class="card border-success text-center rounded-0" style="width: 15rem;">
+              <div class="card border-success text-center rounded-0" id="second_op" style="width: 15rem;">
                 <div class="card-body">
                   <h5 class="card-title">Trainee</h5>
                   <p class="card-text">Tienen un descuento</p>
@@ -70,7 +70,7 @@
                   <p class="text-secondary" style="font-size: 15px;">*presentar documentación</p>
                 </div>
               </div>
-              <div class="card border-warning text-center rounded-0" style="width: 15rem;">
+              <div class="card border-warning text-center rounded-0" id="third_op"style="width: 15rem;">
                 <div class="card-body">
                   <h5 class="card-title">Junior</h5>
                   <p class="card-text">Tienen un descuento</p>
@@ -90,22 +90,22 @@
               <h1 class="fs-2">VALOR DE TICKET $200</h1>
             </div>
 
-            <form class="needs-validation"  onsubmit="return false;" id="formulario">
+            <form class="needs-validation"  onsubmit="return false;" id="form">
               <div class="row">
                 <div class="col">
-                  <input type="text" pattern="[a-zA-Z]*" maxlength="15" id="nombre" data-temp="" class="form-control" placeholder="Nombre"  required >
+                  <input type="text" pattern="[a-zA-Z]*" maxlength="15" id="input_for_name" data-temp="" class="form-control" placeholder="Nombre"  required >
                 </div>
                 <div class="col">
-                  <input type="text" pattern="[a-zA-Z]*" maxlength="35" id="apellido" class="form-control" placeholder="Apellido" required>
+                  <input type="text" pattern="[a-zA-Z]*" maxlength="35" id="last_name" class="form-control" placeholder="Apellido" required>
                 </div>
               </div>
               <div class="col">
-                <input type="email" id="correo" maxlength="35" class="form-control" placeholder="Correo" required>
+                <input type="email" id="email" maxlength="35" class="form-control" placeholder="Correo" required>
               </div>
               <div class="row">
                 <div class="col">
                   <label for="form-control" class="form-label">Cantidad</label>
-                  <input type="number" id="cantidad" class="form-control" placeholder="cantidad" min="1" max="50" required>
+                  <input type="number" id="number_of_tickets" class="form-control" placeholder="cantidad" min="1" max="50" required>
                 </div>
                 <div class="col">
                   <label for="disabledSelect" class="form-label">Categoría</label>
@@ -117,11 +117,12 @@
                 </div>
               </div>
               <div class="form-group">
-                <p class="form-control btn" id="total" style="background-color: rgb(217, 255, 255);">Total a pagar: $</p>
+                <p class="form-control" id="correct_data_input" class="" style="background-color: rgb(200, 245, 173);">La información fue ingresada correctamente. Haga click en el botón para volver al inicio</p>
+                <p class="form-control" id="total" style="background-color: rgb(217, 255, 255);">Total a pagar: $</p>
               </div>
               <div class="form-group text-center">
-                <button type="submit" id="boton_refresh" class="btn text-white" style="background-color: rgb(125, 224, 67);">Borrar</button>
-                <button type="submit" id="boton_submit" onclick="validacion()" class="btn text-white" style="background-color: rgb(125, 224, 67);">Resumen</button>
+                <button type="submit" id="button_refresh" class="btn text-white" style="background-color: rgb(125, 224, 67);">Borrar</button>
+                <button id="button_submit" type="submit" class="btn text-white" style="background-color: rgb(125, 224, 67);">Resumen</button>
               </div>
             </form>
         </div>

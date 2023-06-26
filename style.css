@@ -12,3 +12,15 @@ form{
 #total{
     text-align: start !important;
 }
+
+#first_op:hover{
+    background-color: rgb(198, 212, 243);
+}
+
+#second_op:hover{
+    background-color: rgb(200, 228, 194);
+}
+
+#third_op:hover{
+    background-color: rgb(250, 232, 197);
+}
