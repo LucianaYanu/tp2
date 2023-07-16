@@ -90,26 +90,26 @@
               <h1 class="fs-2">VALOR DE TICKET $200</h1>
             </div>
 
-            <form class="needs-validation"  onsubmit="return false;" id="form">
+            <form class="needs-validation" action="connect.php" method="post" onsubmit="return false;" id="form">
               <div class="row">
                 <div class="col">
-                  <input type="text" pattern="[a-zA-Z]*" maxlength="15" id="input_for_name" data-temp="" class="form-control" placeholder="Nombre"  required >
+                  <input type="text" pattern="[a-zA-Z]*" maxlength="15" id="input_for_name" data-temp="" class="form-control" placeholder="Nombre" name="firstName" required >
                 </div>
                 <div class="col">
-                  <input type="text" pattern="[a-zA-Z]*" maxlength="35" id="last_name" class="form-control" placeholder="Apellido" required>
+                  <input type="text" pattern="[a-zA-Z]*" maxlength="35" id="last_name" class="form-control" placeholder="Apellido"  name="lastName" required>
                 </div>
               </div>
               <div class="col">
-                <input type="email" id="email" maxlength="35" class="form-control" placeholder="Correo" required>
+                <input type="email" id="email" maxlength="35" class="form-control" placeholder="Correo"  name="email" required>
               </div>
               <div class="row">
                 <div class="col">
                   <label for="form-control" class="form-label">Cantidad</label>
-                  <input type="number" id="number_of_tickets" class="form-control" placeholder="cantidad" min="1" max="50" required>
+                  <input type="number" id="number_of_tickets" class="form-control" placeholder="cantidad" min="1" max="50" name="numberOfTickets" required>
                 </div>
                 <div class="col">
                   <label for="disabledSelect" class="form-label">Categoría</label>
-                  <select id="disabledSelect" class="form-select">
+                  <select id="disabledSelect" class="form-select" name="category">
                   <option>Estudiante</option>
                   <option>Trainee</option>
                   <option>Junior</option>
