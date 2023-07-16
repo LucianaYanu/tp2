@@ -6,7 +6,7 @@ $numberOfTickets = $_POST['numberOfTickets'];
 $category = $_POST['category'];
 
 //Database connection
-$conn new mysql('localhost', 'root', '', 'formulario');
+$conn new mysqli('localhost', 'root', '', 'formulario');
 if ($conn-> connect_error){
     die('Connection Failed: '-> .$conn->connect_error);
 }else {
